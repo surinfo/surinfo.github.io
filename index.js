@@ -5,6 +5,8 @@
     '20061212', '20120104', '20130622', '20150622', '20151108', '20160726', '20170711', '20181110',
   ].sort();
 
+  preloadImages(images);
+
   loadFrames(images);
 
 }());
@@ -25,7 +27,14 @@ function loadFrame(i, images) {
   });
 }
 
-function preloadImages() {}
+function preloadImages(images) {
+  for (var i = 0, len = images.length; i < len; i++) {
+    var url = getUrl(i, images); 
+    $('<img/>').attr('src', url).on('load', function() {
+      $(this).remove();
+    });
+  }
+}
 
 function displayFrame(i, images) {
   var url = getUrl(i, images);
