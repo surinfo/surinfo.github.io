@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  background: url(img/jpg/20020426.jpg) no-repeat center center fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: grey;
+}
+
+#sur {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#info, #footer {
+  position: fixed;
+  width: 100%;
+  background-color: #0008;
+  color: white;
+}
+
+#info {
+  text-align: center;
+  font: 1.5em sans-serif;
+  padding: 0.5em;
+}
+
+#footer {
+  text-align: center;
+  font: 1em sans-serif;
+  bottom: 0;
+}
+
+#footer a {
+  margin: 0 1em;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
